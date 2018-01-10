@@ -40,7 +40,7 @@
             </RelativeLayout>
 
             <RadioGroup
-                android:id="@+id/rg_snapbar"
+                android:id="@+id/rgTabBottomLayout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="#FFFFFF"
@@ -57,7 +57,7 @@
                     android:checked="true"
                     android:gravity="center"
                     android:text="Tab1"
-                    android:textColor="#000000" />
+                    android:textColor="#00ffff" />
 
                 <View
                     android:layout_width="0.1dp"
@@ -73,7 +73,7 @@
                     android:button="@null"
                     android:gravity="center"
                     android:text="Tab2"
-                    android:textColor="#000000" />
+                    android:textColor="#00ffff" />
 
                 <View
                     android:layout_width="0.1dp"
@@ -89,7 +89,7 @@
                     android:button="@null"
                     android:gravity="center"
                     android:text="Tab3"
-                    android:textColor="#000000" />
+                    android:textColor="#00ffff" />
 
             </RadioGroup>
 
@@ -104,7 +104,7 @@
     </com.android.cy.scrollviewpager.CYScrollView>
 
     <RadioGroup
-        android:id="@+id/rg_snapbar_top"
+        android:id="@+id/rgTabTopLayout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#FFFFFF"
