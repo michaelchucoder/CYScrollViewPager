@@ -22,6 +22,9 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
     RadioButton btn_tab1_top, btn_tab2_top, btn_tab3_top;
     RadioButton btn_tab1_bottom, btn_tab2_bottom, btn_tab3_bottom;
 
+    View topLayout;
+    View bottomLayout;
+
     CYViewPager cyViewPager;
     List<View> viewList;
     MyAdapter myAdapter;
@@ -51,6 +54,9 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         btn_tab2_bottom = (RadioButton) findViewById(R.id.btn_tab2);
         btn_tab3_bottom = (RadioButton) findViewById(R.id.btn_tab3);
 
+        topLayout =  findViewById(R.id.topLayout);
+        bottomLayout =  findViewById(R.id.bottomLayout);
+
         btn_tab1_bottom.setOnClickListener(this);
         btn_tab1_top.setOnClickListener(this);
         btn_tab2_bottom.setOnClickListener(this);
@@ -64,9 +70,9 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
             @Override
             public void onScrollChanged(CYScrollView scrollView, int x, int y, int oldx, int oldy) {
                 if (y >= tabHeight) {
-                    rgTabTopLayout.setVisibility(View.VISIBLE);
+                    topLayout.setVisibility(View.VISIBLE);
                 } else {
-                    rgTabTopLayout.setVisibility(View.GONE);
+                    topLayout.setVisibility(View.GONE);
                 }
             }
         });
