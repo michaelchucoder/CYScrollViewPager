@@ -34,7 +34,7 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         setContentView(R.layout.activity_scroll_tab);
         mInflater = LayoutInflater.from(this);
         initView();
-        snapbar_y = dip2px(this, 160);//注意你的snapbar以上部分的高度值，将其转换为px（最好设置为固定值，如果非固定，则要动态计算高度）
+        snapbar_y = dip2px(this, 180);//注意你的snapbar以上部分的高度值，将其转换为px（最好设置为固定值，如果非固定，则要动态计算高度）
     }
 
     private void initView() {
