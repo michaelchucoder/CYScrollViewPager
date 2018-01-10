@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context="com.android.cy.scrollviewpager.ScrollPagerActivity">
+
+    <com.android.cy.scrollviewpager.CYScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/iv_headView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_headView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="朱cy"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_snapbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/btn_tab1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_order_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Tab1"
+                    android:textColor="#000000" />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCCCC" />
+
+                <RadioButton
+                    android:id="@+id/btn_tab2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_order_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Tab2"
+                    android:textColor="#000000" />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCCCC" />
+
+                <RadioButton
+                    android:id="@+id/btn_tab3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_order_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Tab3"
+                    android:textColor="#000000" />
+
+            </RadioGroup>
+
+
+            <com.android.cy.scrollviewpager.CYViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </com.android.cy.scrollviewpager.CYScrollView>
+
+    <RadioGroup
+        android:id="@+id/rg_snapbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/btn_tab1_top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_order_tab_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Tab1"
+            android:textColor="#000000" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC" />
+
+        <RadioButton
+            android:id="@+id/btn_tab2_top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_order_tab_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Tab2"
+            android:textColor="#000000" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC" />
+
+        <RadioButton
+            android:id="@+id/btn_tab3_top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_order_tab_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Tab3"
+            android:textColor="#000000" />
+
+    </RadioGroup>
+
+</RelativeLayout>
