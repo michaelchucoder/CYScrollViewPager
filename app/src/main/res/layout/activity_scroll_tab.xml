@@ -62,49 +62,81 @@
                     android:orientation="horizontal"
                     android:weightSum="3">
 
-                    <RadioButton
-                        android:id="@+id/btn_tab1"
+                    <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/btn_order_tab_selector"
-                        android:button="@null"
-                        android:checked="true"
-                        android:gravity="center"
-                        android:text="Tab1"
-                        android:textColor="#00ffff" />
+                        android:layout_weight="1">
 
-                    <View
-                        android:layout_width="0.1dp"
-                        android:layout_height="match_parent"
-                        android:background="#CCCCCC" />
+                        <RadioButton
+                            android:id="@+id/btn_tab1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_order_tab_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="Tab1"
+                            android:textColor="#00ffff" />
 
-                    <RadioButton
-                        android:id="@+id/btn_tab2"
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@+id/btn_tab1"
+                            android:src="@drawable/find_reddot" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/btn_order_tab_selector"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:text="Tab2"
-                        android:textColor="#00ffff" />
+                        android:layout_weight="1">
 
-                    <View
-                        android:layout_width="0.1dp"
-                        android:layout_height="match_parent"
-                        android:background="#CCCCCC" />
+                        <RadioButton
+                            android:id="@+id/btn_tab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_order_tab_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="Tab1"
+                            android:textColor="#00ffff" />
 
-                    <RadioButton
-                        android:id="@+id/btn_tab3"
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@+id/btn_tab2"
+                            android:src="@drawable/find_reddot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/btn_order_tab_selector"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:text="Tab3"
-                        android:textColor="#00ffff" />
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/btn_tab3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/btn_order_tab_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="Tab1"
+                            android:textColor="#00ffff" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@+id/btn_tab3"
+                            android:src="@drawable/find_reddot" />
+
+                    </RelativeLayout>
+
 
                 </RadioGroup>
 
@@ -143,49 +175,81 @@
             android:visibility="visible"
             android:weightSum="3">
 
-            <RadioButton
-                android:id="@+id/btn_tab1_top"
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/btn_order_tab_selector"
-                android:button="@null"
-                android:checked="true"
-                android:gravity="center"
-                android:text="Tab1"
-                android:textColor="#cc0000" />
+                android:layout_weight="1">
 
-            <View
-                android:layout_width="0.1dp"
-                android:layout_height="match_parent"
-                android:background="#CCCCCC" />
+                <RadioButton
+                    android:id="@+id/btn_tab1_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_order_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Tab1"
+                    android:textColor="#00ffff" />
 
-            <RadioButton
-                android:id="@+id/btn_tab2_top"
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_toRightOf="@+id/btn_tab1_top"
+                    android:src="@drawable/find_reddot" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/btn_order_tab_selector"
-                android:button="@null"
-                android:gravity="center"
-                android:text="Tab2"
-                android:textColor="#cc0000" />
+                android:layout_weight="1">
 
-            <View
-                android:layout_width="0.1dp"
-                android:layout_height="match_parent"
-                android:background="#CCCCCC" />
+                <RadioButton
+                    android:id="@+id/btn_tab2_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_order_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Tab1"
+                    android:textColor="#00ffff" />
 
-            <RadioButton
-                android:id="@+id/btn_tab3_top"
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_toRightOf="@+id/btn_tab2_top"
+                    android:src="@drawable/find_reddot" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/btn_order_tab_selector"
-                android:button="@null"
-                android:gravity="center"
-                android:text="Tab3"
-                android:textColor="#cc0000" />
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/btn_tab3_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_order_tab_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="Tab1"
+                    android:textColor="#00ffff" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_toRightOf="@+id/btn_tab3_top"
+                    android:src="@drawable/find_reddot" />
+
+            </RelativeLayout>
+
 
         </RadioGroup>
 

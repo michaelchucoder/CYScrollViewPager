@@ -105,12 +105,30 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
                     case 0:
                         btn_tab1_bottom.setChecked(true);
                         btn_tab1_top.setChecked(true);
+
+                        btn_tab2_bottom.setChecked(false);
+                        btn_tab2_top.setChecked(false);
+
+                        btn_tab3_bottom.setChecked(false);
+                        btn_tab3_top.setChecked(false);
                         break;
                     case 1:
+                        btn_tab1_bottom.setChecked(false);
+                        btn_tab1_top.setChecked(false);
+
                         btn_tab2_bottom.setChecked(true);
                         btn_tab2_top.setChecked(true);
+
+                        btn_tab3_bottom.setChecked(false);
+                        btn_tab3_top.setChecked(false);
                         break;
                     case 2:
+                        btn_tab1_bottom.setChecked(false);
+                        btn_tab1_top.setChecked(false);
+
+                        btn_tab2_bottom.setChecked(false);
+                        btn_tab2_top.setChecked(false);
+
                         btn_tab3_bottom.setChecked(true);
                         btn_tab3_top.setChecked(true);
                         break;
