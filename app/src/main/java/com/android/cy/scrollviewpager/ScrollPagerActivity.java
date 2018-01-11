@@ -18,12 +18,11 @@ import java.util.List;
 public class ScrollPagerActivity extends FragmentActivity implements View.OnClickListener {
 
     CYScrollView scrollView;
-    RadioGroup rgTabTopLayout, rgTabBottomLayout;
+    RadioGroup rgTabTopLayout;
     RadioButton btn_tab1_top, btn_tab2_top, btn_tab3_top;
     RadioButton btn_tab1_bottom, btn_tab2_bottom, btn_tab3_bottom;
 
     View topLayout;
-    View bottomLayout;
 
     CYViewPager cyViewPager;
     List<View> viewList;
@@ -49,13 +48,11 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         btn_tab2_top = (RadioButton) findViewById(R.id.btn_tab2_top);
         btn_tab3_top = (RadioButton) findViewById(R.id.btn_tab3_top);
 
-        rgTabBottomLayout = (RadioGroup) findViewById(R.id.rgTabBottomLayout);
         btn_tab1_bottom = (RadioButton) findViewById(R.id.btn_tab1);
         btn_tab2_bottom = (RadioButton) findViewById(R.id.btn_tab2);
         btn_tab3_bottom = (RadioButton) findViewById(R.id.btn_tab3);
 
         topLayout = findViewById(R.id.topLayout);
-        bottomLayout = findViewById(R.id.bottomLayout);
 
         btn_tab1_bottom.setOnClickListener(this);
         btn_tab1_top.setOnClickListener(this);
