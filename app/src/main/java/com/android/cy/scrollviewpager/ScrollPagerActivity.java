@@ -54,8 +54,8 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         btn_tab2_bottom = (RadioButton) findViewById(R.id.btn_tab2);
         btn_tab3_bottom = (RadioButton) findViewById(R.id.btn_tab3);
 
-        topLayout =  findViewById(R.id.topLayout);
-        bottomLayout =  findViewById(R.id.bottomLayout);
+        topLayout = findViewById(R.id.topLayout);
+        bottomLayout = findViewById(R.id.bottomLayout);
 
         btn_tab1_bottom.setOnClickListener(this);
         btn_tab1_top.setOnClickListener(this);
