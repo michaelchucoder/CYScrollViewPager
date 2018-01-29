@@ -86,7 +86,7 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         for (int i = 0; i < 3; i++) {
             View view = mInflater.inflate(R.layout.item_tab, null);
             LinearLayout ll = (LinearLayout) view.findViewById(R.id.ll);
-            for (int j = 0; j < 20; j++) {
+            for (int j = 0; j < 120; j++) {
                 ll.addView(getView(i));
             }
             viewList.add(view);
