@@ -1,14 +1,14 @@
 package com.android.cy.scrollviewpager;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.PagerAdapter;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -16,8 +16,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScrollPagerActivity extends FragmentActivity implements View.OnClickListener {
+/**
+ * Created by zhxh on 2018/1/29.
+ */
 
+public class ScrollPagerFragActivity extends FragmentActivity implements View.OnClickListener {
     CYScrollView scrollView;
     RadioGroup rgTabTopLayout;
     RadioButton btn_tab1_top, btn_tab2_top, btn_tab3_top;
@@ -26,7 +29,7 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
     View topLayout;
 
     CYViewPager cyViewPager;
-    List<View> viewList;
+    List<Fragment> fragmentList;
     MyAdapter myAdapter;
     private LayoutInflater mInflater;
 
@@ -39,14 +42,6 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         mInflater = LayoutInflater.from(this);
         initView();
         tabHeight = dip2px(this, 180);//注意你的snapbar以上部分的高度值，将其转换为px（最好设置为固定值，如果非固定，则要动态计算高度）
-
-
-        topLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ScrollPagerActivity.this, ScrollPagerFragActivity.class));
-            }
-        });
     }
 
     private void initView() {
@@ -91,16 +86,12 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
      * 初始化viewPaper
      */
     private void initViewPaper() {
-        viewList = new ArrayList<>();
+        fragmentList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            View view = mInflater.inflate(R.layout.item_tab, null);
-            LinearLayout ll = (LinearLayout) view.findViewById(R.id.ll);
-            for (int j = 0; j < 120; j++) {
-                ll.addView(getView(i));
-            }
-            viewList.add(view);
+            ItemFragment itemFragment = ItemFragment.newInstance(i + 1);
+            fragmentList.add(itemFragment);
         }
-        myAdapter = new MyAdapter();
+        myAdapter = new MyAdapter(getSupportFragmentManager(), fragmentList);
         cyViewPager.setAdapter(myAdapter);
         cyViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -160,28 +151,26 @@ public class ScrollPagerActivity extends FragmentActivity implements View.OnClic
         return view;
     }
 
-    private class MyAdapter extends PagerAdapter {
+    private class MyAdapter extends FragmentPagerAdapter {
+        private List<Fragment> mFragments;
+
+        public MyAdapter(FragmentManager fm, List<Fragment> mFragments) {
+            super(fm);
+            this.mFragments = mFragments;
+
+        }
 
         @Override
         public int getCount() {
-            return viewList.size();
+            return mFragments.size();
         }
 
-        @Override
-        public Object instantiateItem(View arg0, int arg1) {
-            ((ViewPager) arg0).addView(viewList.get(arg1));
-            return viewList.get(arg1);
-        }
 
         @Override
-        public void destroyItem(View arg0, int arg1, Object arg2) {
-            ((ViewPager) arg0).removeView((View) arg2);
+        public Fragment getItem(int position) {
+            return mFragments.get(position);
         }
 
-        @Override
-        public boolean isViewFromObject(View arg0, Object arg1) {
-            return arg0 == arg1;
-        }
     }
 
 
